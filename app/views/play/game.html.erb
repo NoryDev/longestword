@@ -1,0 +1,32 @@
+<!-- <h1>Play#game</h1>
+<p>Find me in app/views/play/game.html.erb</p> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-offset-4 col-lg-4">
+      <h2>Welcome to the longest word-game !</h2>
+      <p>Here is your grid :</p>
+      <p class="bg-success text-center"><%= @grid %></p>
+      <form action="/score" method="post">
+        <div class="form-group">
+          <label for="question">What is your best shot?</label>
+          <input type="hidden" id="start_time" name="start_time" value="<%= @start_time %>">
+          <input type="hidden" id="grid" name="grid" value="<%= @grid %>">
+          <input type="text" id="question" class="form-control"  name="shot" placeholder="type your longest word">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Submit!">
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- puts "******** Welcome to the longest word-game !********"
+puts "Here is your grid :"
+grid = generate_grid(9)
+puts grid.join(" ")
+puts "*****************************************************"
+
+puts "What's your best shot ?"
+start_time = Time.now
+attempt = gets.chomp
+end_time = Time.now -->

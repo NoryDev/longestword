@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-offset-4 col-lg-4">
+      <h2>Your score:</h2>
+
+      <p>Your word:</p>
+      <p class="bg-success text-center"><%= @attempt %></p>
+
+      <p>Time Taken to answer:</p>
+      <p class="bg-success text-center"><%= @result[:time].round(2) %> seconds</p>
+
+      <p>Translation:</p>
+      <p class="bg-success text-center"><%= @result[:translation] %></p>
+
+      <p>Your score:</p>
+      <p class="bg-success text-center"><%= @result[:score].round(2) %></p>
+
+      <p>Message:</p>
+      <p class="bg-success text-center"><%= @result[:message] %></p>
+
+      <p><%= link_to 'Play again', '/game' %></p>
+    </div>
+  </div>
+</div>
