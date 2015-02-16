@@ -54,7 +54,7 @@ class PlayController < ApplicationController
 
     open(api_url) do |stream|
       translation = JSON.parse(stream.read)
-      if translation["Error"]
+      if translation["Error"] || !translation["term0"]
         nil
       else
         translation["term0"]["PrincipalTranslations"]["0"]["FirstTranslation"]["term"]
